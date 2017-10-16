@@ -22,6 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dapilcher
 github_username:  dapilcher
 
+JEKYLL_ENV: development
 google_analytics: UA-105593865-2
 
 # Build settings
