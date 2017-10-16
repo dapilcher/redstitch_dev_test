@@ -1,0 +1,310 @@
+---
+---
+
+// Variables -------------------------
+
+$darkblue: rgb(0,72,110);
+$lightblue: rgb(41,107,165);
+$orange: rgb(185,70,0);
+$orange-transparent: rgba(185,70,0,0.8);
+$lightgray: rgb(241,241,241);
+$midgray: rgb(229,229,229);
+  
+// Styling ----------------------------
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+.container {
+  padding:0;
+}
+
+@media(min-width:1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: $lightblue;
+  text-decoration: underline;
+
+  &:hover {
+    color: $darkblue;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+#header-logo {
+  width: auto;
+  max-height: 64px;
+}
+
+.hero {
+  height: 540px;
+  background-position:center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .hero-overlay {
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $orange-transparent;
+    color: white;
+
+    .hero-overlay-text {
+      padding: 1.7rem;
+    }
+  }
+
+  .cta {
+    width: 100%;
+    height: 3.5rem;
+    padding: .5rem;
+  }
+
+  #cta-input {
+    @extend .cta;
+    border: 1px solid rgb(0,72,110);
+  }
+
+  #cta-button {
+    @extend .cta;
+    background-color: $darkblue;
+    border-bottom: $lightblue solid 4px;
+    -webkit-user-select: none;        
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .fa-search {
+      color: $lightblue;
+      font-size: 1.5rem;
+    }
+
+    #cta-button-text {
+      font-weight: 700;
+      font-size: .7rem;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cta-animate {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+#video-caption {
+  padding: 1rem;
+  font-size:.7rem;
+  text-align: center;
+  background-color: $lightgray;
+}
+
+#info-snippets {
+  text-align: center;
+  padding: 2rem;
+
+  .snippet {
+    font-size: .9rem;
+  }
+}
+
+#list-icon {
+  color: rgb(229,229,229);
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.icon-container {
+  overflow: hidden;
+}
+
+.hr-behind {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: $midgray;
+  
+  &.left {
+    right: 1em;
+    margin-left: -50%;
+  }
+  
+  &.right {
+    left: 1em;
+    margin-right: -50%;
+  }
+}
+
+li {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: .7em;
+
+  &:before {
+    content: "\f105"; // FontAwesome Unicode: >
+    color: $lightblue;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+  }
+}
+
+#quote-image-container {
+  position: relative;
+
+  #quote-image {
+    width: 100%;
+    height: auto;
+    z-index: -9;
+  }
+}
+
+#quote-text-container {
+  background-color: $darkblue;
+  color: white;
+  position: relative;
+  z-index: -8;
+
+  #quote-text-inner {
+    height: auto;
+    margin:1.5rem;
+    border: 1px solid $lightblue;
+    z-index: -7;
+
+    #quote-text {
+      padding: 1.5rem;
+      z-index: 0;
+
+      #block-quote {
+        font-family: 'Merriweather', serif;
+        position: relative;
+
+        #open-quote {
+          color: $lightblue;
+          font-size: 4rem;
+          position: absolute;
+          top:-.5rem;
+          left:-.5rem;
+          z-index: -3;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 3rem;
+
+  #footer-logo {
+    max-width: 75%;
+    height: auto;
+  }
+}
+
+// md breakpoint -----------------------
+@media (min-width:768px) {
+  .hero .hero-overlay {
+    position:relative;
+    top:0;
+    left:0;
+    transform: translate(0, 0);
+    max-width: 50%;
+    height: 490px;
+    border-bottom-left-radius: 100% 10px;
+    border-bottom-right-radius: 100% 10px;
+  }
+  
+  #video-caption {
+    background-color: white;
+    text-align: left;
+  }
+  
+  #info-snippets {
+    text-align: left;
+    padding: 0;
+  }
+  
+  footer {
+    background-color: $lightgray;
+  
+    #footer-logo {
+      max-width: 100%;
+    }
+  }
+}
+
+// lg breakpoint -----------------
+@media(min-width:992px) {
+  #quote-text-container #quote-text-inner #quote-text {
+    padding: 2.7rem;
+  }
+  
+  #quote-text-container{
+    &:before {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background-color: $darkblue;
+      transform: skewX(-15deg);
+      z-index: -5;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      top:0;
+      left:0;
+      width: 50%;
+      height: 100%;
+      background-color: $darkblue;
+      transform: skewX(15deg);
+      z-index: -5;
+    }
+  }
+}
+
+// Utility
+
+.emph {
+  color: $darkblue;
+  font-weight: 700;
+}
+
+.f-sm {
+  font-size: .9rem;
+}
+
+.f-tiny {
+  font-size: .75rem;
+}
