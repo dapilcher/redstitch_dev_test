@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=en>
+
+  {% include head.html %}
+
+  <body class="container">
+
+    {% include header.html %}
+    
+    {{ content }}
+
+    {% include footer.html %}
+    
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- <a href="#..."> smooth scroll -->
+    <script type="text/javascript">
+      function smoothScrollingTo(target){
+        $('html,body').animate({scrollTop:$(target).offset().top}, 500);
+      };
+      $('a[href*=\\#]').on('click', function(event){     
+          event.preventDefault();
+          smoothScrollingTo(this.hash);
+      });
+    </script>
+
+  </body>
+
+</html>
