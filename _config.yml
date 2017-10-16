@@ -16,11 +16,13 @@
 title: Ipsum Beer and Wine
 email: dpilcher.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Lorem ipsum dolor sit amet et cetera et cetera et cetera. I am trying my hand at delivering this static test site using the Jekyll generator.
+  Lorem ipsum dolor sit amet et cetera et cetera et cetera. This site was built as a development test preceding a job interview. I built this site with Jekyll (HTML, SCSS), pushed to GitHub, and deployed on Netlify.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dapilcher
 github_username:  dapilcher
+
+google_analytics: UA-105593865-2
 
 # Build settings
 markdown: kramdown

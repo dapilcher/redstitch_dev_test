@@ -51,6 +51,7 @@ a {
 
 .hero {
   height: 540px;
+  background-image: url(../images/Aspot-Image.jpg);
   background-position:center;
   background-repeat: no-repeat;
   position: relative;
@@ -294,7 +295,7 @@ footer {
   }
 }
 
-// Utility
+// Utility --------------------
 
 .emph {
   color: $darkblue;

@@ -14,7 +14,7 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 240 | escape }}">
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Open+Sans:300,300i,700|Roboto:700" rel="stylesheet">
