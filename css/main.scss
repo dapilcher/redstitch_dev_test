@@ -88,9 +88,6 @@ a {
     @extend .cta;
     background-color: $darkblue;
     border-bottom: $lightblue solid 4px;
-    -webkit-user-select: none;        
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     transition: 0.25s;
 

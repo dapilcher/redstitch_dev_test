@@ -27,9 +27,13 @@ google_analytics: UA-105593865-2
 
 # Build settings
 markdown: kramdown
-# theme: minima
+autoprefixer:
+  only_production: true
+  browsers:
+    - last 2 versions
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
