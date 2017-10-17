@@ -11,12 +11,32 @@ layout: default
       <p class="my-4">Lorem ipsum ad qui amet dolore, vitae cetero quaerendum mel ea. Facilis fastidii duo no. Viris partiendo ius no, alia animal</p>
 
       <form>
-        <input id="cta-input" type="text" placeholder="Text Input" id="cta-input">
-        <div class="mt-1 d-flex justify-content-center align-items-center" id="cta-button">
+        <input id="cta-input" type="text" placeholder="Text Input" id="cta-input" required>
+        <div class="cta-animate mt-1 d-flex justify-content-center align-items-center" id="cta-button" data-toggle="modal" data-target="#cta-modal">
           <i class="fa fa-search"></i>
           <p class="ml-2 text-uppercase" id="cta-button-text">Lorem ipsum ad qui, amet dolore lorem</p>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Button Modal -->
+<div class="modal fade" id="cta-modal" tabindex="-1" role="dialog" aria-labelledby="cta-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CTA Modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Thank you for clicking that very enticing button
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
@@ -90,7 +110,7 @@ layout: default
     </div>
 
   <!-- CTA link -->
-    <div class="cta-link-animate">
+    <div class="cta-animate">
       <a href="#hero" id="cta-link" class="text-uppercase emph" style="color:rgb(185,70,0);">
         Instructior ei sed, ei ius nostro corrumpit <i class="ml-2 fa fa-angle-right" id="cta-link-icon" style="font-size: 1.2rem;"></i>
       </a>
@@ -107,10 +127,11 @@ layout: default
   </div>
   <!-- Text box -->
   <div class="col-lg" id="quote-text-container">
+    <!-- I had some trouble styling the inner border of the text box with the added angles at the largest breakpoint. I would love to learn your solution to this! -->
     <div id="quote-text-inner">
       <div id="quote-text">
         <span id="block-quote">
-          <p><span id="open-quote" class="fa fa-quote-left"><!--&ldquo;--></span>Nec mundi equidem consulatu no. Sea an prodesset intellegat, usu dicit aperiam ut. Usu cu animal meliore. Platonem theophrastus duo ea. Nec mundi equidem consulatu no. Sea an prodesset.&rdquo;</p>
+          <p><span id="open-quote" class="fa fa-quote-left"></span>Nec mundi equidem consulatu no. Sea an prodesset intellegat, usu dicit aperiam ut. Usu cu animal meliore. Platonem theophrastus duo ea. Nec mundi equidem consulatu no. Sea an prodesset.&rdquo;</p>
         </span>
         <div id="block-quote-footer">
           <b>Some Dudes</b><br>

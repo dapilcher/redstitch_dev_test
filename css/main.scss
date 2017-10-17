@@ -124,11 +124,12 @@ a {
   100%{ transform: translateX(8px); }
 }
 
-.cta-link-animate {
+.cta-animate {
   cursor: pointer;
 
-  &:hover {
-    transform: scale(1.06);
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
     #cta-link-icon {
       animation: bounceY 0.2s infinite alternate;
     }
